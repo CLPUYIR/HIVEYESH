@@ -63,7 +63,7 @@ def run_matchmaker(intent):
 
 if __name__ == "__main__":
     # Test
-    print("--- Hiveesh Stage 4: Maximalist Matchmaker ---")
+    print("--- Hyveyesh Stage 4: Maximalist Matchmaker ---")
     intent = "Reasoning"
     res = run_matchmaker(intent)
     if res:

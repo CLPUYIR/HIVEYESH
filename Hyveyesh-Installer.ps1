@@ -1,19 +1,19 @@
 <#
 .SYNOPSIS
-    Hiveesh Stage 1: The One-Liner Bootstrapper.
-    Verifies admin rights, sets up the portable Hiveesh environment, and launches profiling.
+    Hyveyesh Stage 1: The One-Liner Bootstrapper.
+    Verifies admin rights, sets up the portable Hyveyesh environment, and launches profiling.
 
 .DESCRIPTION
     1. Elevation check.
-    2. Portable Python environment setup in C:\ProgramData\Hiveesh.
+    2. Portable Python environment setup in C:\ProgramData\Hyveyesh.
     3. Initialization of Stage 2.
 #>
 
 $ErrorActionPreference = "Stop"
-$HIVEESH_ROOT = "C:\ProgramData\Hiveesh"
+$HYVEYESH_ROOT = "C:\ProgramData\Hyveyesh"
 $PYTHON_URL = "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip"
 
-Function Write-Hiveesh-Art {
+Function Write-Hyveyesh-Art {
     Write-Host @"
     
   _    _  _               _      
@@ -34,20 +34,20 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
     exit
 }
 
-Write-Hiveesh-Art
-Write-Host "[+] Initializing Hiveesh Ecosystem at $HIVEESH_ROOT" -ForegroundColor Gray
+Write-Hyveyesh-Art
+Write-Host "[+] Initializing Hyveyesh Ecosystem at $HYVEYESH_ROOT" -ForegroundColor Gray
 
 # --- 2. Directory Setup ---
-if (-not (Test-Path $HIVEESH_ROOT)) {
-    New-Item -Path $HIVEESH_ROOT -ItemType Directory | Out-Null
+if (-not (Test-Path $HYVEYESH_ROOT)) {
+    New-Item -Path $HYVEYESH_ROOT -ItemType Directory | Out-Null
 }
-$RuntimeDir = Join-Path $HIVEESH_ROOT "Runtime"
+$RuntimeDir = Join-Path $HYVEYESH_ROOT "Runtime"
 if (-not (Test-Path $RuntimeDir)) {
     New-Item -Path $RuntimeDir -ItemType Directory | Out-Null
 }
 
 # --- 3. Portable Python Setup ---
-$ZipPath = Join-Path $HIVEESH_ROOT "python_embed.zip"
+$ZipPath = Join-Path $HYVEYESH_ROOT "python_embed.zip"
 if (-not (Test-Path (Join-Path $RuntimeDir "python.exe"))) {
     Write-Host "[+] Downloading Portable Python Environment..." -ForegroundColor Yellow
     Invoke-WebRequest -Uri $PYTHON_URL -OutFile $ZipPath
@@ -67,7 +67,7 @@ if (-not (Test-Path (Join-Path $RuntimeDir "python.exe"))) {
 }
 
 # --- 4. Launch Stage 2 (Staging) ---
-Write-Host "[+] Hiveesh Bootstrapper Complete. Passing control to Profiler..." -ForegroundColor Green
-# In a real scenario, we would copy the Stage 2 scripts into $HIVEESH_ROOT and launch them.
+Write-Host "[+] Hyveyesh Bootstrapper Complete. Passing control to Profiler..." -ForegroundColor Green
+# In a real scenario, we would copy the Stage 2 scripts into $HYVEYESH_ROOT and launch them.
 # For now, we simulate the handover.
 Write-Host "`nReady to map the nervous system." -ForegroundColor Cyan

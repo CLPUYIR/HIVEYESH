@@ -5,7 +5,7 @@ import argparse
 import sys
 
 def run_server(port=8100):
-    print(f"--- Hiveesh Benchmark Server listening on {port} ---")
+    print(f"--- Hyveyesh Benchmark Server listening on {port} ---")
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(('0.0.0.0', port))
         s.listen(1)
@@ -28,7 +28,7 @@ def run_server(port=8100):
                     print(f"Received {total_received} bytes in {duration:.2f}s ({mbps:.2f} Mbps)")
 
 def run_client(server_ip, port=8100, duration=5):
-    print(f"--- Hiveesh Benchmark Client connecting to {server_ip}:{port} ---")
+    print(f"--- Hyveyesh Benchmark Client connecting to {server_ip}:{port} ---")
     data = b'x' * 65536
     total_sent = 0
     
@@ -69,7 +69,7 @@ def run_client(server_ip, port=8100, duration=5):
         print(f"Latency test failed: {e}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Hiveesh Network Benchmarker")
+    parser = argparse.ArgumentParser(description="Hyveyesh Network Benchmarker")
     parser.add_argument("--mode", choices=["server", "client"], required=True)
     parser.add_argument("--ip", help="Server IP (required for client mode)")
     parser.add_argument("--port", type=int, default=8100)

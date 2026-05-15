@@ -26,12 +26,12 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Hiveesh Specifics
+# Hyveyesh Specifics
 node_profile.json
 *.zip
 Runtime/
 # Avoid committing local staging directories
-C:/ProgramData/Hiveesh/
+C:/ProgramData/Hyveyesh/
 # Ignore plan files from Gemini
 plans/
 

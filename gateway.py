@@ -3,7 +3,7 @@ import time
 import random
 import threading
 
-class HiveeshGateway:
+class HyveyeshGateway:
     def __init__(self):
         self.active_shards = {}
         self.is_healthy = True
@@ -36,15 +36,15 @@ class HiveeshGateway:
         print(f"\n[🧠] SWARM THINKING: {prompt}")
         print(f"[📡] Sharding request to {len(self.node_states)} nodes...")
         time.sleep(1)
-        return "This is a simulated response from the sharded Hiveesh swarm (Llama-3.1 405B)."
+        return "This is a simulated response from the sharded Hyveyesh swarm (Llama-3.1 405B)."
 
     def register_node(self, node_id, status="ONLINE"):
         self.node_states[node_id] = status
         print(f"[+] Node {node_id} added to the Hive Gateway.")
 
 if __name__ == "__main__":
-    print("--- Hiveesh Stage 6: Exit Gateway & Self-Healing ---")
-    gateway = HiveeshGateway()
+    print("--- Hyveyesh Stage 6: Exit Gateway & Self-Healing ---")
+    gateway = HyveyeshGateway()
     
     # Register some dummy nodes
     gateway.register_node("LAB-NODE-01")

@@ -7,7 +7,7 @@ class ShardDistributor:
     def __init__(self, cluster_config_path="node_profile.json"):
         self.config_path = cluster_config_path
         self.nodes = self._load_nodes()
-        self.hive_root = "C:\\Hiveesh"
+        self.hive_root = "C:\\Hyveyesh"
 
     def _load_nodes(self):
         # In a real swarm, this would be a list of all nodes from Stage 2
@@ -20,8 +20,8 @@ class ShardDistributor:
         """Pushes the llama-server.exe to the target node."""
         print(f"[+] Deploying Native Win64 Binaries to {target_node}...")
         # Robocopy is the fastest built-in way to push files across Windows LAN
-        # We assume Hiveesh-Installer already set up the folder
-        cmd = f"robocopy .\\Binaries \\\\{target_node}\\C$\\Hiveesh\\Binaries /MT:32 /Z"
+        # We assume Hyveyesh-Installer already set up the folder
+        cmd = f"robocopy .\\Binaries \\\\{target_node}\\C$\\Hyveyesh\\Binaries /MT:32 /Z"
         # subprocess.run(cmd, shell=True) 
 
     def shard_model(self, model_path, cluster_capacity):
@@ -53,7 +53,7 @@ class ShardDistributor:
 
     def execute_maximalist_deploy(self, model_recommendation):
         """The Master Stage 5 Execution Loop."""
-        print(f"\n--- Hiveesh Stage 5: MAXIMALIST DEPLOYMENT ---")
+        print(f"\n--- Hyveyesh Stage 5: MAXIMALIST DEPLOYMENT ---")
         print(f"Targeting: {model_recommendation['model']} at {model_recommendation['quant']}")
         
         # 1. Sync Binaries

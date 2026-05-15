@@ -15,9 +15,9 @@ HIVEYESH is the world's first **"Maximalist Orchestrator"** for Windows networks
 
 ---
 
-## 🏆 Hiveesh vs. The World: Why We Win
+## 🏆 Hyveyesh vs. The World: Why We Win
 Think of most AI software like a **single fast car**. It’s good, but it can only carry so much.  
-**Hiveesh** is like building a **giant, unstoppable cargo train** out of whatever spare wheels and scrap metal you find in your garage.
+**Hyveyesh** is like building a **giant, unstoppable cargo train** out of whatever spare wheels and scrap metal you find in your garage.
 
 | Feature | The "Other" Guys (Ollama, Exo, Petals) | 🐝 **HIVEYESH** |
 | :--- | :--- | :--- |
@@ -29,10 +29,10 @@ Think of most AI software like a **single fast car**. It’s good, but it can on
 
 ### 🧠 The "Maximalist" Secret: IQ Over Speed
 Existing software tries to make AI *fast*. We make AI **SMART**.  
-Most software runs a "High School Level" AI because it's easier. Hiveesh shards the world's most powerful "PhD Level" AIs (like **Llama-3.1 405B** or **DeepSeek-R1**) across your network.  
+Most software runs a "High School Level" AI because it's easier. Hyveyesh shards the world's most powerful "PhD Level" AIs (like **Llama-3.1 405B** or **DeepSeek-R1**) across your network.  
 
 *   **The Competitors:** Give you a fast response from a simple, basic AI.
-*   **Hiveesh:** Gives you a **Brilliant, Genius-level** response from a Super-AI that is **50x larger** than what others can run.
+*   **Hyveyesh:** Gives you a **Brilliant, Genius-level** response from a Super-AI that is **50x larger** than what others can run.
 
 ---
 
@@ -64,9 +64,9 @@ Most software runs a "High School Level" AI because it's easier. Hiveesh shards 
 ### **Step 1: The Incubation (Bootstrapping)**
 Open PowerShell as Administrator and run the installer:
 ```powershell
-.\Hiveesh-Installer.ps1
+.\Hyveyesh-Installer.ps1
 ```
-*This silently deploys the portable Python environment and creates the `C:\ProgramData\Hiveesh` ecosystem.*
+*This silently deploys the portable Python environment and creates the `C:\ProgramData\Hyveyesh` ecosystem.*
 
 ### **Step 2: Mapping the Nervous System**
 Run the profiler to detect your cluster's power:

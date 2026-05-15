@@ -1,22 +1,22 @@
 <#
 .SYNOPSIS
-    Hiveesh Swarm Deployment Master Script.
+    Hyveyesh Swarm Deployment Master Script.
     Performs discovery, diagnosis, OS configuration, and runtime deployment across institutional nodes.
 
 .DESCRIPTION
     1. Scans subnet for active nodes.
     2. Performs hardware diagnostics via WMI.
     3. Configures Windows Firewall and Registry for performance and compatibility.
-    4. Pushes the portable Hiveesh runtime payload via WinRM.
+    4. Pushes the portable Hyveyesh runtime payload via WinRM.
 
 .PARAMETER Subnet
     The subnet prefix to scan (e.g., "192.168.1"). Defaults to the current subnet.
 
 .PARAMETER PayloadPath
-    Path to the Hiveesh runtime folder on the admin node.
+    Path to the Hyveyesh runtime folder on the admin node.
 
 .EXAMPLE
-    .\Hiveesh-Deploy.ps1 -Subnet "192.168.0" -PayloadPath "C:\HiveeshStaging"
+    .\Hyveyesh-Deploy.ps1 -Subnet "192.168.0" -PayloadPath "C:\HyveyeshStaging"
 #>
 
 Param(
@@ -95,14 +95,14 @@ foreach ($Node in $ActiveNodes) {
 
             # --- Firewall: Ports 8000-8100 ---
             Invoke-Command -ComputerName $Node -ScriptBlock {
-                if (-not (Get-NetFirewallRule -DisplayName "Hiveesh Swarm" -ErrorAction SilentlyContinue)) {
-                    New-NetFirewallRule -DisplayName "Hiveesh Swarm" -Direction Inbound -LocalPort 8000-8100 -Protocol TCP -Action Allow
+                if (-not (Get-NetFirewallRule -DisplayName "Hyveyesh Swarm" -ErrorAction SilentlyContinue)) {
+                    New-NetFirewallRule -DisplayName "Hyveyesh Swarm" -Direction Inbound -LocalPort 8000-8100 -Protocol TCP -Action Allow
                 }
             } -ErrorAction Stop
 
             # --- Directory Setup ---
             Invoke-Command -ComputerName $Node -ScriptBlock {
-                if (-not (Test-Path "C:\Hiveesh")) { New-Item -Path "C:\Hiveesh" -ItemType Directory }
+                if (-not (Test-Path "C:\Hyveyesh")) { New-Item -Path "C:\Hyveyesh" -ItemType Directory }
             }
 
             return [PSCustomObject]@{
@@ -128,7 +128,7 @@ $FinalResults = Wait-Job $DeploymentJobs | Receive-Job
 Remove-Job $DeploymentJobs
 
 # --- Summary Table ---
-Write-Header "Hiveesh Swarm Deployment Summary"
+Write-Header "Hyveyesh Swarm Deployment Summary"
 $FinalResults | Format-Table -AutoSize
 
 # Note: Payload push (Copy-Item) is usually better done outside jobs or via BITS if large.

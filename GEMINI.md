@@ -1,10 +1,10 @@
-# Hiveesh: The Dynamic AI Swarm (Maximalist Edition)
+# Hyveyesh: The Dynamic AI Swarm (Maximalist Edition)
 
 ## Vision
-Transform any Windows LAN into a high-performance distributed supercomputer. Hiveesh is a "maximalist" orchestrator that profiles hardware in real-time and fits the **LARGEST POSSIBLE** open-source models (Llama-3.1 405B, DeepSeek-R1) onto the available cluster capacity.
+Transform any Windows LAN into a high-performance distributed supercomputer. Hyveyesh is a "maximalist" orchestrator that profiles hardware in real-time and fits the **LARGEST POSSIBLE** open-source models (Llama-3.1 405B, DeepSeek-R1) onto the available cluster capacity.
 
 ## The 6-Stage Pipeline
-1.  **Stage 1: The One-Liner Bootstrapper** (`Hiveesh-Installer.ps1`) - Zero-friction admin setup and portable Python deployment.
+1.  **Stage 1: The One-Liner Bootstrapper** (`Hyveyesh-Installer.ps1`) - Zero-friction admin setup and portable Python deployment.
 2.  **Stage 2: Dynamic Profiling & Benchmarking** - Mapping the "Nervous System" and calculating $C_{total}$.
 3.  **Stage 3: Interactive TUI Wizard** - Capturing user intent with a creative, human-centric interface.
 4.  **Stage 4: Maximalist Model Matchmaker** - Selecting the biggest models based on cluster capacity.

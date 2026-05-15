@@ -82,7 +82,7 @@ def profile_node():
     return data
 
 if __name__ == "__main__":
-    print("--- Hiveesh Stage 2: Dynamic Profiler ---")
+    print("--- Hyveyesh Stage 2: Dynamic Profiler ---")
     node_data = profile_node()
     print(f"Node: {node_data['node']}")
     print(f"Cluster Contribution: {node_data['net_capacity_gb']} GB")
